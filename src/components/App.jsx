@@ -1,16 +1,15 @@
-export const App = () => {
+import { Character } from 'components/Character/Character';
+import { Weapon } from 'components/Weapon/Weapon';
+
+export const App = () =>  {
+
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <Character/>
+      <Weapon/>
+    </>
+    
   );
 };
+
