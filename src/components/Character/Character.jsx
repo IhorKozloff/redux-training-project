@@ -1,38 +1,37 @@
-// import { useSelector, useDispatch } from "react-redux";
-
-// import { setName, incraseAgility } from 'redux/character-reducer';
+import { useSelector, useDispatch } from "react-redux";
+import { incraseAgility, decraseAgility, incraseStrenght, decraseStrenght} from 'redux/character-actions'
 
 
 
 export const Character = () => {
 
-    // const {name, params} = useSelector(steeeeeit => steeeeeit.character);
-    // const dispatch = useDispatch();
+    const characterState = useSelector(myState => myState.characterAttributes);
+    const dispatch = useDispatch();
+
+
+    console.log(characterState)
     
     return (
         <>
         <h1>Character</h1>
       
       <ul>
-        {/* <li>
-          {name}
+        <li>
+          {characterState.name}
         </li>
 
         <li>
-          {params.agility}
+          {characterState.params.agility}
 
-          <button type="button" onClick={() => {
-                dispatch(incraseAgility(10))
-          }}>Incrase agility</button>
-
-          <button type="button">Decrase agility</button>
+          <button type="button" onClick={() => {dispatch(incraseAgility(10))}}>Incrase agility by 10</button>
+          <button type="button" onClick={() => {dispatch(decraseAgility(10))}}>Decrase agility by 10</button>
         </li>
 
         <li>
-          {params.strenght}
-          <button type="button">Incrase strenght</button>
-          <button type="button">Decrase strenght</button>
-        </li> */}
+          {characterState.params.strenght}
+          <button type="button" onClick={() => {dispatch(incraseStrenght(5))}}>Incrase strenght by 5</button>
+          <button type="button" onClick={() => {dispatch(decraseStrenght(5))}}>Decrase strenght by 5</button>
+        </li>
 
       </ul>
       </>
