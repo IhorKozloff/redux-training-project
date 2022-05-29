@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
-import { rename, incraseAgility, decraseAgility, incraseStrenght, decraseStrenght} from 'redux/actions'
-
+// import { rename, incraseAgility, decraseAgility, incraseStrenght, decraseStrenght} from 'redux/actions'
+import { rename, incraseAgility, decraseAgility, incraseStrenght, decraseStrenght } from 'redux/character-slice'
 
 
 export const Character = () => {

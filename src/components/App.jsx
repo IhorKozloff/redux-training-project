@@ -1,6 +1,7 @@
 import { Character } from 'components/Character/Character';
 import { Weapon } from 'components/Weapon/Weapon';
-import { resetCharacter, resetWeapon }  from 'redux/actions';
+import { resetCharacter }  from 'redux/character-slice';
+import { resetWeapon }  from 'redux/actions';
 import { useDispatch } from 'react-redux';
 
 export const App = () =>  {
