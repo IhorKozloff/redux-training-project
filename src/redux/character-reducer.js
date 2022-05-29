@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { incraseAgility, decraseAgility, incraseStrenght, decraseStrenght} from 'redux/character-actions'
+import { rename, incraseAgility, decraseAgility, incraseStrenght, decraseStrenght, resetCharacter} from 'redux/actions'
 
 
 
@@ -13,6 +13,12 @@ const initialState = {
 }
 
 export const characterReducer = createReducer(initialState,{
+
+    [rename]: (state, action) => {
+        state.name = action.payload;
+        return state;
+    },
+
     [incraseAgility]: (state, action) => {
         state.params.agility += action.payload
         return state
@@ -31,6 +37,7 @@ export const characterReducer = createReducer(initialState,{
         return state
     },
 
+    [resetCharacter]: (state) => state = initialState
 
 
 

@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { incraseAgility, decraseAgility, incraseStrenght, decraseStrenght} from 'redux/character-actions'
+import { rename, incraseAgility, decraseAgility, incraseStrenght, decraseStrenght} from 'redux/actions'
 
 
 
@@ -18,6 +18,7 @@ export const Character = () => {
       <ul>
         <li>
           {characterState.name}
+          <button type="button" onClick={() => {dispatch(rename('eyeshield21'))}}>Rename to eyeshield21</button>
         </li>
 
         <li>
